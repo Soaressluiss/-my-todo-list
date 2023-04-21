@@ -1,4 +1,5 @@
 @import "./partials/variables";
+@import "./partials/mixins";
 
 * {
     margin: 0;
@@ -18,6 +19,14 @@ body {
         #a499f5,
         #8093f1
     );
+}
+main {
+    text-align: center;
+    h2 {
+        @include FontFormat($font-primary, 1.4rem, #333, bold);
+        margin: 1rem 0;
+        letter-spacing: 3px;
+    }
 }
 .hide {
     display: none;

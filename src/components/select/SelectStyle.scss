@@ -1,0 +1,30 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+
+.selectContainer {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+select {
+    padding: 10px 2rem;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    margin: 1rem 0;
+    outline: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        outline: 3px $color-tertiary solid;
+    }
+    option {
+        outline: none;
+        background-color: whitesmoke;
+    }
+}

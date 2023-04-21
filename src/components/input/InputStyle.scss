@@ -1,0 +1,46 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+
+input {
+    padding: 16px 15px;
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.1rem;
+    transition: 0.4s;
+    &::placeholder {
+        font-family: $font-secondary;
+    }
+    &:focus {
+        outline: 3px $color-tertiary solid;
+    }
+}
+input[type="submit"] {
+    background-color: $color-tertiary;
+    width: 200px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    @include FontFormat($font-secondary, 1.2rem, #333, bold);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus {
+        background-color: #647bf1;
+        transform: scale(0.95);
+    }
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.inputLabel {
+    @include FontFormat($font-secondary, 1.4rem, #333, bold);
+    margin-bottom: 0.4em;
+    letter-spacing: 3px;
+}

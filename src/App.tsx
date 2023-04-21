@@ -9,7 +9,6 @@ function App() {
             <Header />
             <main>
                 <div>
-                    <h2>O que você esta fazendo?</h2>
                     <TaskForm btnText="Criar 🧾" />
                 </div>
                 <div>

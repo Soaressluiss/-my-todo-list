@@ -1,11 +1,13 @@
+import "./SelectStyle.scss";
+
 interface ISelectTypes {
     options: string[];
 }
 
 const Select = ({ options }: ISelectTypes): JSX.Element => {
     return (
-        <>
-            <label>
+        <div className="selectContainer">
+            <label className="SelectLabel">
                 <select>
                     Difficulty
                     <option disabled value="">
@@ -18,7 +20,7 @@ const Select = ({ options }: ISelectTypes): JSX.Element => {
                     ))}
                 </select>
             </label>
-        </>
+        </div>
     );
 };
 

@@ -4,7 +4,7 @@
 header {
     background-color: $color-primary;
     text-align: center;
-    padding: 2rem;
+    padding: 1.2rem;
     width: 100%;
     h1 {
         @include FontFormat($font-secondary, 2.4rem, $color-tertiary, bold);
