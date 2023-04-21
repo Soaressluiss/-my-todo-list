@@ -2,13 +2,19 @@ import "./SelectStyle.scss";
 
 interface ISelectTypes {
     options: string[];
+    value: string;
+    handleDifficulty(e: React.ChangeEvent<HTMLSelectElement>): void;
 }
 
-const Select = ({ options }: ISelectTypes): JSX.Element => {
+const Select = ({
+    options,
+    value,
+    handleDifficulty,
+}: ISelectTypes): JSX.Element => {
     return (
         <div className="selectContainer">
             <label className="SelectLabel">
-                <select>
+                <select value={value} onChange={handleDifficulty}>
                     Difficulty
                     <option disabled value="">
                         Dificuldade

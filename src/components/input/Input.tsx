@@ -1,6 +1,9 @@
 import "./InputStyle.scss";
-
-const Input = (): JSX.Element => {
+interface IInputTypes {
+    value: string;
+    handleTitle(e: React.ChangeEvent<HTMLInputElement>): void;
+}
+const Input = ({ value, handleTitle }: IInputTypes): JSX.Element => {
     return (
         <div className="inputContainer">
             <label className="inputLabel" htmlFor="title">
@@ -11,6 +14,8 @@ const Input = (): JSX.Element => {
                 name="title"
                 id="title"
                 placeholder="Digite sua tarefa"
+                value={value}
+                onChange={handleTitle}
             />
         </div>
     );
