@@ -1,0 +1,12 @@
+@mixin FlexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin FontFormat($family, $size, $color, $weight: 400) {
+    font-family: $family;
+    font-size: $size;
+    color: #333;
+    font-weight: $weight;
+}

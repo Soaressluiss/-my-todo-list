@@ -1,14 +1,12 @@
-import React from 'react'
-import './App.scss'
+import "./App.scss";
+import Header from "./components/header/Header";
 
 function App() {
-
-  return (
-    <>
-      
-      <h3>oi</h3>
-    </>
-  )
+    return (
+        <>
+            <Header />
+        </>
+    );
 }
 
-export default App
+export default App;
