@@ -5,10 +5,14 @@ interface IModalTypes {
     children: React.ReactNode;
 }
 
-const Modal = ({ children }: IModalTypes) => {
+const Modal = ({ children }: IModalTypes): JSX.Element => {
+    const closeModal = (): void => {
+        const modal = document.querySelector("#modal");
+        modal?.classList.add("hide");
+    };
     return (
-        <section id="modal">
-            <div className="fade"></div>
+        <section id="modal" className="hide">
+            <div className="fade" onClick={closeModal}></div>
             <div className="modal">
                 <h2>Editar Tarefa 📝</h2>
                 {children}

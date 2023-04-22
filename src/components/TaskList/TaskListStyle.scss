@@ -1,7 +1,7 @@
 @import "../../partials/variables";
 @import "../../partials/mixins";
 
-section {
+.taskListContainer {
     display: flex;
     flex-direction: row;
     width: 600px;

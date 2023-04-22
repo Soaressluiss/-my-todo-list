@@ -1,15 +1,16 @@
 import { useState } from "react";
-import "./App.scss";
 import TaskForm from "./components/TaskForm/TaskForm";
 import TaskList from "./components/TaskList/TaskList";
 import Header from "./components/header/Header";
-
 import { Itask } from "./interfaces/Task";
 import Modal from "./components/modal/Modal";
+import "./App.scss";
+
 function App() {
     const [taskList, setTaskList] = useState<Itask[]>([]);
+    const [taskToUpdate, setTaskToUpdate] = useState<Itask | null>(null);
 
-    const TaskDelete = (id: number) => {
+    const TaskDelete = (id: number): void => {
         setTaskList(
             taskList.filter((task) => {
                 return task.id !== id;
@@ -17,10 +18,44 @@ function App() {
         );
     };
 
+    const hideOrShowModal = (display: boolean): void => {
+        const modal = document.querySelector("#modal");
+        if (display) {
+            modal?.classList.remove("hide");
+        } else {
+            modal?.classList.add("hide");
+        }
+    };
+    const editTask = (task: Itask): void => {
+        hideOrShowModal(true);
+        setTaskToUpdate(task);
+    };
+
+    const updateTask = (
+        id: number,
+        title: string,
+        difficulty: string
+    ): void => {
+        const updatedTask: Itask = { id, title, difficulty };
+        const Updateditens = taskList.map((task) => {
+            return task.id == updatedTask.id ? updatedTask : task;
+        });
+
+        setTaskList(Updateditens);
+        hideOrShowModal(false);
+    };
+
     return (
         <>
             <Modal
-                children={<TaskForm btnText="Salvar ✔" taskList={taskList} />}
+                children={
+                    <TaskForm
+                        btnText="Salvar ✔"
+                        taskList={taskList}
+                        taskToUpdate={taskToUpdate}
+                        handleUpdate={updateTask}
+                    />
+                }
             />
             <Header />
             <main>
@@ -33,7 +68,11 @@ function App() {
                 </div>
                 <div>
                     <h2>Suas tarefas:</h2>
-                    <TaskList tasklist={taskList} taskDelete={TaskDelete} />
+                    <TaskList
+                        tasklist={taskList}
+                        taskDelete={TaskDelete}
+                        editTask={editTask}
+                    />
                 </div>
             </main>
         </>

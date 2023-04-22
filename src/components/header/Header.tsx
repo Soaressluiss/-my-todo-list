@@ -1,6 +1,6 @@
 import "./HeaderStyles.scss";
 
-const Header = () => {
+const Header = (): JSX.Element => {
     return (
         <header>
             <h1>My To Do List 📝</h1>

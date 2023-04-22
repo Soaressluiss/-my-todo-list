@@ -4,20 +4,29 @@ import "./TaskListStyle.scss";
 interface TaskListTypes {
     tasklist: Itask[];
     taskDelete(id: number): void;
+    // hideOrShowModal(display: boolean): void;
+    editTask(task: Itask): void;
 }
-const TaskList = ({ tasklist, taskDelete }: TaskListTypes): JSX.Element => {
+const TaskList = ({
+    tasklist,
+    taskDelete,
+    // hideOrShowModal,
+    editTask
+}: TaskListTypes): JSX.Element => {
     if (tasklist.length > 0) {
         return (
             <>
                 {tasklist.map((task) => (
-                    <section key={task.id}>
+                    <section className="taskListContainer" key={task.id}>
                         <div className="infoTasks">
                             <h4 className="titleTasks">{task.title}</h4>
                             <p className="difficultyTasks">{task.difficulty}</p>
                         </div>
                         <div className="taskIcons">
-                            <FaPencilAlt />
-                            <FaTrashAlt onClick={()=> taskDelete(task.id)} />
+                            <FaPencilAlt
+                                onClick={() => editTask(task)}
+                            />
+                            <FaTrashAlt onClick={() => taskDelete(task.id)} />
                         </div>
                     </section>
                 ))}
