@@ -5,6 +5,7 @@ import TaskList from "./components/TaskList/TaskList";
 import Header from "./components/header/Header";
 
 import { Itask } from "./interfaces/Task";
+import Modal from "./components/modal/Modal";
 function App() {
     const [taskList, setTaskList] = useState<Itask[]>([]);
 
@@ -18,6 +19,9 @@ function App() {
 
     return (
         <>
+            <Modal
+                children={<TaskForm btnText="Salvar ✔" taskList={taskList} />}
+            />
             <Header />
             <main>
                 <div>
