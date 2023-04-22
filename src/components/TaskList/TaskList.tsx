@@ -1,5 +1,6 @@
 import { Itask } from "../../interfaces/Task";
-
+import { FaPencilAlt, FaTrashAlt } from "react-icons/fa";
+import "./TaskListStyle.scss";
 interface TaskListTypes {
     tasklist: Itask[];
 }
@@ -8,18 +9,21 @@ const TaskList = ({ tasklist }: TaskListTypes): JSX.Element => {
         return (
             <>
                 {tasklist.map((task) => (
-                    <div key={task.id}>
-                        <div>
-                            <h4>{task.title}</h4>
-                            <p>{task.difficulty}</p>
+                    <section key={task.id}>
+                        <div className="infoTasks">
+                            <h4 className="titleTasks">{task.title}</h4>
+                            <p className="difficultyTasks">{task.difficulty}</p>
                         </div>
-                        <div></div>
-                    </div>
+                        <div className="taskIcons">
+                            <FaPencilAlt />
+                            <FaTrashAlt />
+                        </div>
+                    </section>
                 ))}
             </>
         );
     } else {
-        return <p>Não tem tarefas cadastradas!</p>;
+        return <p className="withoutTasks">Não tem tarefas cadastradas!</p>;
     }
 };
 

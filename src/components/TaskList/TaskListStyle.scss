@@ -1,0 +1,54 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    background-color: $color-tertiary;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+    border-bottom: 5px $color-primary solid;
+    border-radius: 10px;
+    .infoTasks {
+        display: grid;
+        gap: 1rem;
+        place-items: center;
+        .titleTasks {
+            @include FontFormat($font-secondary, 1.6rem, #333, bold);
+            text-transform: capitalize;
+            text-align: center;
+            position: relative;
+        }
+        .difficultyTasks {
+            @include FontFormat($color-primary, 1.2rem, #333, bold);
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+    .taskIcons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        > svg {
+            font-size: 1.7rem;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        > svg:hover,
+        > svg:focus {
+            transform: scale(0.9);
+        }
+    }
+}
+
+.withoutTasks {
+    @include FontFormat($font-secondary, 1.6rem, #333, bold);
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 5rem;
+}
