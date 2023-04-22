@@ -7,6 +7,15 @@ import Header from "./components/header/Header";
 import { Itask } from "./interfaces/Task";
 function App() {
     const [taskList, setTaskList] = useState<Itask[]>([]);
+
+    const TaskDelete = (id: number) => {
+        setTaskList(
+            taskList.filter((task) => {
+                return task.id !== id;
+            })
+        );
+    };
+
     return (
         <>
             <Header />
@@ -20,7 +29,7 @@ function App() {
                 </div>
                 <div>
                     <h2>Suas tarefas:</h2>
-                    <TaskList tasklist={taskList}/>
+                    <TaskList tasklist={taskList} taskDelete={TaskDelete} />
                 </div>
             </main>
         </>

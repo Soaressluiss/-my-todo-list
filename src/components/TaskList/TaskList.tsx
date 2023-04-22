@@ -3,8 +3,9 @@ import { FaPencilAlt, FaTrashAlt } from "react-icons/fa";
 import "./TaskListStyle.scss";
 interface TaskListTypes {
     tasklist: Itask[];
+    taskDelete(id: number): void;
 }
-const TaskList = ({ tasklist }: TaskListTypes): JSX.Element => {
+const TaskList = ({ tasklist, taskDelete }: TaskListTypes): JSX.Element => {
     if (tasklist.length > 0) {
         return (
             <>
@@ -16,7 +17,7 @@ const TaskList = ({ tasklist }: TaskListTypes): JSX.Element => {
                         </div>
                         <div className="taskIcons">
                             <FaPencilAlt />
-                            <FaTrashAlt />
+                            <FaTrashAlt onClick={()=> taskDelete(task.id)} />
                         </div>
                     </section>
                 ))}
