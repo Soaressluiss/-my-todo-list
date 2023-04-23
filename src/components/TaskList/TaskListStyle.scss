@@ -1,5 +1,6 @@
 @import "../../partials/variables";
 @import "../../partials/mixins";
+@import "../../partials/breakpoints";
 
 .taskListContainer {
     display: flex;
@@ -9,23 +10,39 @@
     margin: 0 auto;
     align-items: center;
     justify-content: space-around;
-    padding: 1rem 0;
     border-bottom: 5px $color-primary solid;
     border-radius: 10px;
+    padding: 0.5rem 0;
+
+    @include BreakpointMobile {
+        width: 90%;
+    }
     .infoTasks {
         display: grid;
         gap: 1rem;
         place-items: center;
+        @include BreakpointMobile {
+            gap: 0.5rem;
+        }
         .titleTasks {
             @include FontFormat($font-secondary, 1.6rem, #333, bold);
             text-transform: capitalize;
+            width: 250px;
             text-align: center;
             position: relative;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            @include BreakpointMobile {
+                font-size: 1.4rem;
+            }
         }
         .difficultyTasks {
             @include FontFormat($color-primary, 1.2rem, #333, bold);
             text-transform: capitalize;
             text-align: center;
+            @include BreakpointMobile {
+                font-size: 1rem;
+            }
         }
     }
     .taskIcons {
@@ -33,11 +50,17 @@
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
         align-items: center;
+        @include BreakpointMobile {
+            gap: 1.4rem;
+        }
         > svg {
             font-size: 1.7rem;
             color: #333;
             cursor: pointer;
             transition: all 0.3s ease;
+            @include BreakpointMobile {
+                font-size: 1.5rem;
+            }
         }
         > svg:hover,
         > svg:focus {
@@ -51,4 +74,7 @@
     text-transform: capitalize;
     text-align: center;
     margin-top: 5rem;
+    @include BreakpointMobile {
+        font-size: 1.3rem;
+    }
 }

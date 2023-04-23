@@ -1,5 +1,6 @@
 @import "../../partials/variables";
 @import "../../partials/mixins";
+@import "../../partials/breakpoints";
 
 .selectContainer {
     width: inherit;
@@ -7,10 +8,13 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    @include BreakpointMobile {
+        align-items: center;
+    }
 }
 select {
     padding: 10px 2rem;
-    width: 60%;
+    width: 300px;
     border: none;
     border-radius: 5px;
     font-family: $font-secondary;
@@ -22,6 +26,9 @@ select {
     &:hover,
     &:focus {
         outline: 3px $color-tertiary solid;
+    }
+    @include BreakpointMobile {
+        width: 280px;
     }
     option {
         outline: none;

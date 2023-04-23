@@ -1,0 +1,18 @@
+$widthTablet: 835px;
+$widthMobile: 430px;
+
+//media queries para tablets
+
+@mixin BreakpointTablet {
+    @media screen and (max-width: $widthTablet) {
+        @content;
+    }
+}
+
+//media queries para Smartphones
+
+@mixin BreakpointMobile {
+    @media screen and (max-width: $widthMobile) {
+        @content;
+    }
+}

@@ -1,12 +1,22 @@
 @import "../../partials/variables";
 @import "../../partials/mixins";
+@import "../../partials/breakpoints";
 
 header {
     background-color: $color-primary;
     text-align: center;
     padding: 1.2rem;
     width: 100%;
+    @include BreakpointMobile {
+        padding: 1rem;
+    }
     h1 {
         @include FontFormat($font-secondary, 2.4rem, $color-tertiary, bold);
+        @include BreakpointTablet {
+            font-size: 2rem;
+        }
+        @include BreakpointMobile {
+            font-size: 1.8rem;
+        }
     }
 }

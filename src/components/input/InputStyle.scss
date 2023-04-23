@@ -1,9 +1,11 @@
 @import "../../partials/variables";
 @import "../../partials/mixins";
+@import "../../partials/breakpoints";
 
 input {
     padding: 16px 15px;
     border: 1px solid $color-secondary;
+    width: 500px;
     border-radius: 5px;
     outline: none;
     font-size: 1.1rem;
@@ -13,6 +15,12 @@ input {
     }
     &:focus {
         outline: 3px $color-tertiary solid;
+    }
+    @include BreakpointTablet {
+        width: 400px;
+    }
+    @include BreakpointMobile {
+        width: 280px;
     }
 }
 input[type="submit"] {
@@ -31,6 +39,9 @@ input[type="submit"] {
     &:focus {
         background-color: #647bf1;
         transform: scale(0.95);
+    }
+    @include BreakpointMobile {
+        padding: 0.5rem 1.3rem;
     }
 }
 
