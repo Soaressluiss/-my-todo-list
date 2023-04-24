@@ -4,13 +4,11 @@ import "./TaskListStyle.scss";
 interface TaskListTypes {
     tasklist: Itask[];
     taskDelete(id: number): void;
-    // hideOrShowModal(display: boolean): void;
     editTask(task: Itask): void;
 }
 const TaskList = ({
     tasklist,
     taskDelete,
-    // hideOrShowModal,
     editTask
 }: TaskListTypes): JSX.Element => {
     if (tasklist.length > 0) {

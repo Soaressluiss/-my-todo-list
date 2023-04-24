@@ -14,7 +14,7 @@ const Select = ({
     return (
         <div className="selectContainer">
             <label className="SelectLabel">
-                <select value={value} onChange={handleDifficulty}>
+                <select value={value} onChange={handleDifficulty} required>
                     Difficulty
                     <option disabled value="">
                         Dificuldade

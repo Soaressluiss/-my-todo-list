@@ -40,9 +40,12 @@ function App() {
         const Updateditens = taskList.map((task) => {
             return task.id == updatedTask.id ? updatedTask : task;
         });
-
-        setTaskList(Updateditens);
-        hideOrShowModal(false);
+        if (title.length <= 3) {
+            alert(`Você NÃO pode salvar uma tarefa tão pequena`);
+        } else {
+            setTaskList(Updateditens);
+            hideOrShowModal(false);
+        }
     };
 
     return (

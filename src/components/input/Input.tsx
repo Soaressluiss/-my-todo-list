@@ -14,6 +14,7 @@ const Input = ({ value, handleTitle }: IInputTypes): JSX.Element => {
                 name="title"
                 id="title"
                 placeholder="Digite sua tarefa"
+                required
                 value={value}
                 onChange={handleTitle}
             />

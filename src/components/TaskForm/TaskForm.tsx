@@ -37,6 +37,8 @@ const TaskForm = ({
 
         if (handleUpdate) {
             handleUpdate(id, title, difficulty);
+        } else if (title.length <= 3) {
+            alert(` Sua possivel tarefa NÃO tem um tamanho adequado`);
         } else {
             const idGeneration = Math.floor(Math.random() * 1000);
 
