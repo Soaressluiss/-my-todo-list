@@ -47,7 +47,7 @@ const TaskForm = ({
             const newTask: Itask = { id, title, difficulty };
             setId(idGeneration);
 
-            setTaskList?.([...taskList, newTask]);
+            setTaskList?.([newTask, ...taskList]);
             setTitle("");
             setDifficulty("");
         }
