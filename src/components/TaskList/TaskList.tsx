@@ -9,7 +9,7 @@ interface TaskListTypes {
 const TaskList = ({
     tasklist,
     taskDelete,
-    editTask
+    editTask,
 }: TaskListTypes): JSX.Element => {
     if (tasklist.length > 0) {
         return (
@@ -23,8 +23,12 @@ const TaskList = ({
                         <div className="taskIcons">
                             <FaPencilAlt
                                 onClick={() => editTask(task)}
+                                title="Editar Tarefa"
                             />
-                            <FaTrashAlt onClick={() => taskDelete(task.id)} />
+                            <FaTrashAlt
+                                onClick={() => taskDelete(task.id)}
+                                title="Apagar tarefa"
+                            />
                         </div>
                     </section>
                 ))}

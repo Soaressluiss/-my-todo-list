@@ -54,6 +54,7 @@ function App() {
                 children={
                     <TaskForm
                         btnText="Salvar ✔"
+                        titleAux="Salve sua tarefa"
                         taskList={taskList}
                         taskToUpdate={taskToUpdate}
                         handleUpdate={updateTask}
@@ -65,6 +66,7 @@ function App() {
                 <div>
                     <TaskForm
                         btnText="Criar 🧾"
+                        titleAux="Crie sua tarefa"
                         taskList={taskList}
                         setTaskList={setTaskList}
                     />

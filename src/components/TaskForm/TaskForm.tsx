@@ -8,6 +8,7 @@ import "../input/InputStyle.scss";
 
 interface ITaskFormTypes {
     btnText: string;
+    titleAux: string;
     taskList: Itask[];
     setTaskList?: React.Dispatch<SetStateAction<Itask[]>>;
     taskToUpdate?: Itask | null;
@@ -15,6 +16,7 @@ interface ITaskFormTypes {
 }
 const TaskForm = ({
     btnText,
+    titleAux,
     taskList,
     setTaskList,
     taskToUpdate,
@@ -69,7 +71,7 @@ const TaskForm = ({
                 value={difficulty}
             />
 
-            <input type="submit" value={btnText} />
+            <input type="submit" value={btnText} title={titleAux} />
         </form>
     );
 };
