@@ -1,5 +1,6 @@
 @import "../../partials/variables";
 @import "../../partials/breakpoints";
+@import "../../partials/animations";
 
 form {
     display: flex;
@@ -11,6 +12,8 @@ form {
     background-color: $color-primary;
     padding: 1rem;
     border-radius: 10px;
+    animation: upToDown 0.5s ease-in;
+
     @include BreakpointTablet {
         width: 90%;
     }

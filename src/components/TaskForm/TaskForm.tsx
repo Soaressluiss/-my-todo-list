@@ -62,7 +62,7 @@ const TaskForm = ({
             <Input handleTitle={handleTitle} value={title} />
 
             <Select
-                options={["Fácil", "Medio", "Difícil"]}
+                options={["Fácil", "Media", "Difícil"]}
                 handleDifficulty={handleDifficulty}
                 value={difficulty}
             />

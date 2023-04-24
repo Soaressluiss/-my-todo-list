@@ -1,0 +1,18 @@
+// animações
+
+@keyframes upToDown {
+    from {
+        transform: translateY(-400px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes slideRight {
+    from {
+        transform: translateX(-600px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

@@ -22,6 +22,7 @@
     background-color: $color-secondary;
     border-radius: 10px;
     text-align: center;
+    animation: upToDown 0.5s ease-in;
     > h2 {
         @include FontFormat($font-secondary, 1.3rem, #333, bold);
         margin-top: 0.5rem;
