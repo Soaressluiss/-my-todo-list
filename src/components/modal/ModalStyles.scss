@@ -2,7 +2,7 @@
 @import "../../partials/variables";
 @import "../../partials/breakpoints";
 .fade {
-    width: 100%;
+    width: 130%;
     height: 100%;
     position: absolute;
     background-color: #333;
@@ -10,6 +10,11 @@
     z-index: 1;
 }
 
+#modal {
+    width: 100%;
+    height: 150vh;
+    position: absolute;
+}
 .modal {
     position: absolute;
     top: 10%;

@@ -9,6 +9,7 @@
     list-style: none;
 }
 body {
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(
@@ -22,11 +23,10 @@ body {
 }
 main {
     text-align: center;
-    h2 {
-        @include FontFormat($font-primary, 1.4rem, #333, bold);
-        margin: 1rem 0;
-        letter-spacing: 3px;
-    }
+    min-height: 60vh;
+    @include FontFormat($font-primary, 1.4rem, #333, bold);
+    margin: 1rem 0;
+    letter-spacing: 3px;
 }
 .hide {
     display: none;

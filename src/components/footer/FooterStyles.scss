@@ -1,0 +1,44 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+@import "../../partials/breakpoints";
+
+.footer {
+    @include FlexCenter;
+    flex-direction: column;
+    gap: 1rem;
+    position: static;
+    bottom: 0;
+    background-color: $color-secondary;
+    width: 100vw;
+    padding: 1rem;
+
+    h3 {
+        @include FontFormat($font-primary, 1.6rem, #333, bold);
+    }
+    .devContainer {
+        @include FlexCenter;
+        flex-direction: column;
+        gap: 1rem;
+        > h4 {
+            @include FontFormat($font-primary, 1.1rem, #333, bold);
+        }
+        .devSocial {
+            display: flex;
+            gap: 1.4rem;
+            align-items: center;
+            svg {
+                font-size: 1.5rem;
+            }
+        }
+        a:nth-child(1) {
+            color: #0000ff;
+        }
+        a:nth-child(2) {
+            color: #333;
+        }
+        a:hover {
+            transition: all 0.4s ease;
+            transform: scale(0.9);
+        }
+    }
+}

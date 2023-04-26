@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import { Itask } from "./interfaces/Task";
 import Modal from "./components/modal/Modal";
 import "./App.scss";
+import Footer from "./components/footer/Footer";
 
 function App() {
     const [taskList, setTaskList] = useState<Itask[]>([]);
@@ -80,6 +81,7 @@ function App() {
                     />
                 </div>
             </main>
+            <Footer />
         </>
     );
 }
