@@ -1,11 +1,11 @@
 <div>
 
-![header](./assets/)
+![header](./src/assets/Github%20ReadMe%20files/Banner.png)
 
 </div>
 <div align='center'>
 
-![Language](https://img.shields.io/github/languages/count/Soaressluiss/my-todo-list?style=for-the-badge&logo=appveyor&color=orange)
+![Language](https://img.shields.io/github/languages/count/Soaressluiss/my-todo-list?style=for-the-badge&logo=appveyor&color=green)
 ![forks](https://img.shields.io/github/forks/soaressluiss/my-todo-list?style=for-the-badge&logo=appveyor)
 ![star user](https://img.shields.io/github/stars/soaressluiss/my-todo-list?style=for-the-badge&logo=appveyor&color=yellow)
 ![files](https://img.shields.io/github/directory-file-count/soaressluiss/my-todo-list?style=for-the-badge&logo=appveyor&color=blue)
@@ -29,13 +29,13 @@ O projeto consiste em um To Do List pessoal, onde o usuário pode anotar suas ta
 
 Foi desenvolvido com o intuito de colocar em prática os conhecimentos obtidos em React integrado com TypeScript, aprimorar os estudos em responsividade, animações e UX/UI.
 
-Algumas funcionalidades:
+Funcionalidades:
 
 -   Criar uma tarefa;
 -   Deletar uma tarefa;
 -   Editar uma tarefa;
 -   Prevenção contra erros (tarefa muito curta ou ausente);
--   Resposividade a diversos tamanhos de Tela(desktop, tablet, smartphones);
+-   Responsividade a diversos tamanhos de Tela (desktop, tablet, smartphones);
 
 ## 👨‍💻 Tecnologias utilizadas:
 
@@ -50,7 +50,7 @@ Algumas funcionalidades:
 
 ## 🌐 Acesse o projeto online:
 
-> [My To Do List 📝](https://soaressluiss.github.io/Zoo/)
+> [My To Do List 📝](https://my-todo-list-soaressluiss.vercel.app/)
 
 ## 💻 Inicie localmente:
 
@@ -80,7 +80,7 @@ npm run dev
 
 ## 📽 Gif demostrativo:
 
-![animation](./assets/)
+![animation](./src/assets/Github%20ReadMe%20files/todoGif.gif)
 
 ## ♻️ Como contribuir:
 
